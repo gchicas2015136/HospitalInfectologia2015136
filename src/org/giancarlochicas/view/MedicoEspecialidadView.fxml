@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="661.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.giancarlochicas.controller.MedicoEspecialidadController">
+   <children>
+      <Label layoutX="113.0" layoutY="31.0" prefHeight="80.0" prefWidth="596.0" text="Medico Especialidad" textAlignment="CENTER" textFill="#77ffbb">
+         <font>
+            <Font name="Cambria" size="65.0" />
+         </font>
+      </Label>
+      <Label layoutX="81.0" layoutY="136.0" prefHeight="25.0" prefWidth="131.0" text="Codigo Medico" textFill="#3fa86c">
+         <effect>
+            <Glow />
+         </effect>
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="194.0" prefHeight="33.0" prefWidth="174.0" text="Codigo Especialidad" textFill="#3fa86c">
+         <effect>
+            <Glow />
+         </effect>
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblResponsablesTurnos" layoutX="50.0" layoutY="328.0" prefHeight="228.0" prefWidth="704.0">
+         <columns>
+            <TableColumn fx:id="colCodigoResponsableTurno" prefWidth="171.3333282470703" text="Codigo Medico Especialidad" />
+            <TableColumn fx:id="colCodigoCargo1" minWidth="0.0" prefWidth="179.6666717529297" text="Codigo Medico" />
+            <TableColumn fx:id="colNombres" prefWidth="151.33331298828125" text="Codigo Especialidad" />
+            <TableColumn fx:id="colApellidos" prefWidth="201.99996948242188" text="Codigo Horario" />
+         </columns>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="112.0" layoutY="567.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="118.0" text="Nuevo">
+         <effect>
+            <InnerShadow color="#113216" />
+         </effect>
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="588.0" layoutY="567.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="118.0" text="Reporte">
+         <effect>
+            <InnerShadow color="#113216" />
+         </effect>
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="431.0" layoutY="567.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="135.0" text="Editar">
+         <effect>
+            <InnerShadow color="#113216" />
+         </effect>
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="276.0" layoutY="567.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="118.0" text="Eliminar">
+         <effect>
+            <InnerShadow color="#113216" />
+         </effect>
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="133.0" fitWidth="126.0" layoutX="676.0" layoutY="21.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Icono1.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cmbCodigoArea" disable="true" layoutX="238.0" layoutY="136.0" prefHeight="25.0" prefWidth="328.0" visibleRowCount="15" />
+      <ComboBox fx:id="cmbCodigoCargo" disable="true" layoutX="241.0" layoutY="197.0" prefHeight="25.0" prefWidth="325.0" />
+      <Label layoutX="94.0" layoutY="250.0" prefHeight="33.0" prefWidth="131.0" text="Codigo Horario" textFill="#3fa86c">
+         <effect>
+            <Glow />
+         </effect>
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoCargo1" disable="true" layoutX="242.0" layoutY="255.0" prefHeight="25.0" prefWidth="327.0" />
+   </children>
+</AnchorPane>

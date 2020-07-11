@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporteMedicos" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c1353b96-38d2-4ec5-a651-c49750da8013">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="144"/>
+	<parameter name="codigoMedico" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[Select M.codigoMedico, M.licenciaMedica, M.nombres, M.apellidos, M.horaEntrada, M.horaSalida, M.turnoMaximo, M.sexo, E.nombreEspecialidad, T.codigoPaciente, P.nombres, RE.nombreResponsable, C.nombreCargo, A.nombreArea, H.lunes, H.martes, H.miercoles, H.jueves, H.viernes, CU.numeroContacto, CU.nombres, CU.apellidos
+ FROM Medicos M Inner Join MedicoEspecialidad ME On M.codigoMedico = ME.codigoMedico Inner Join Especialidades E On E.codigoEspecialidad = ME.codigoEspecialidad
+  Inner Join Turno T On ME.codigoMedicoEspecialidad = T.codigoMedicoEspecialidad Inner Join Pacientes P on T.codigoPaciente = P.codigoPaciente Inner Join ResponsableTurno RE On T.codigoResponsableTurno = RE.codigoResponsableTurno
+   Inner Join Cargos C On RE.codigoCargo = C.codigoCargo Inner Join Areas A On RE.codigoArea = A.codigoArea Inner Join Horarios H On H.codigoHorario = ME.codigoHorario Inner Join ContactoUrgencia CU On P.codigoPaciente = CU.codigoPaciente Where M.codigoMedico = $P{codigoMedico};]]>
+	</queryString>
+	<field name="codigoMedico" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="licenciaMedica" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombres" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidos" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaEntrada" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaSalida" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="turnoMaximo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sexo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEspecialidad" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoPaciente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreResponsable" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreCargo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreArea" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lunes" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="martes" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="miercoles" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jueves" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="viernes" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="numeroContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="802" splitType="Stretch">
+			<ellipse>
+				<reportElement x="446" y="-41" width="183" height="185" forecolor="#99FF99" backcolor="#99FF99" uuid="d8014ddc-309b-4c6b-b8eb-c44ae442474f"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="407" y="83" width="111" height="100" forecolor="#CCFFCC" backcolor="#CCFFCC" uuid="30da12f3-15e4-4802-8a03-4038476fdc78"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="474" y="238" width="148" height="134" forecolor="#99FF99" backcolor="#99FF99" uuid="e9ac1e94-68a2-499b-9a64-65dd6eb78f10"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="45" y="465" width="83" height="78" forecolor="#99FFFF" backcolor="#CCFFFF" uuid="6b9c01b0-78c1-47f8-a7c4-7a64cea0b0ba"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="-64" y="164" width="148" height="134" forecolor="#99FF99" backcolor="#99FF99" uuid="a9ec9f49-18b5-4214-a716-ae82b2f3de91"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="13" y="230" width="83" height="78" forecolor="#CCFFCC" backcolor="#CCFFCC" uuid="060f3763-2642-41f1-a5eb-acaee511e75c"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="-37" y="506" width="152" height="144" forecolor="#66FFCC" backcolor="#33FFFF" uuid="41e779e6-7ed1-468c-82e7-b3dbca5b0341"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="446" y="439" width="150" height="152" forecolor="#99FFFF" backcolor="#33FFFF" uuid="8a24d167-dbf9-4d0c-93fd-caf0e64568f4"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="419" y="230" width="101" height="100" forecolor="#99FF99" backcolor="#CCFFCC" uuid="18337524-64aa-40d3-a2c8-cc91296e698e"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="391" y="625" width="83" height="78" forecolor="#99FFFF" backcolor="#CCFFFF" uuid="c52b8718-8808-4c51-848a-5bc56213b306"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="446" y="650" width="141" height="133" forecolor="#99FFFF" backcolor="#33FFFF" uuid="4b3ff3f9-ecff-4fd4-9565-f1f6139a129b"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="192" y="183" width="144" height="140" forecolor="#CCFFCC" backcolor="#CCFFCC" uuid="7f2920ed-ae98-49d3-8ab7-1a68599acf6d"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="407" y="428" width="83" height="78" forecolor="#99FFFF" backcolor="#CCFFFF" uuid="23d4fb0a-86ba-49f0-ace9-945686c515a0"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="168" y="384" width="115" height="109" forecolor="#99FFFF" backcolor="#CCFFFF" uuid="e34b4019-c40a-4d4f-93ba-c094df12d54b"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="269" y="523" width="97" height="87" forecolor="#99FFFF" backcolor="#CCFFFF" uuid="54835677-739d-44f9-852a-b4fa6ea9362d"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="128" y="625" width="115" height="109" forecolor="#99FFFF" backcolor="#CCFFFF" uuid="e1a4cf04-451c-4ed1-9050-664c98a98792"/>
+			</ellipse>
+		</band>
+	</background>
+	<title>
+		<band height="122" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="108" y="69" width="311" height="20" backcolor="#CCFFFF" uuid="118165d5-4618-48b4-a444-8b1a1dfff56a"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="111" y="0" width="225" height="65" forecolor="#00CCCC" uuid="43c0448f-c279-4536-8c16-ad3cfa31d483"/>
+				<textElement>
+					<font fontName="Cambria Math" size="26"/>
+				</textElement>
+				<text><![CDATA[Hospital San Miguel de Guatemala]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="69" width="304" height="20" uuid="029c03fb-f1ab-4b6d-a07f-d1fa8cd7644c"/>
+				<textElement>
+					<font fontName="Cambria" size="14" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[La Salud de Guatemala a nuestro Cuidado.]]></text>
+			</staticText>
+			<image>
+				<reportElement x="-2" y="0" width="110" height="122" uuid="e88f3f28-e61a-4e50-837b-a1bd7b91bab0"/>
+				<imageExpression><![CDATA["C:\\Users\\programacion\\Documents\\NetBeansProjects\\HospitalInfectologia2015136\\src\\org\\giancarlochicas\\images\\IconoHospital.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="64" splitType="Stretch">
+			<staticText>
+				<reportElement x="115" y="13" width="389" height="51" forecolor="#00CC99" uuid="346cbcfb-ac9f-433a-a44c-39950761003a"/>
+				<textElement>
+					<font fontName="Cambria Math" size="40"/>
+				</textElement>
+				<text><![CDATA[REPORTE FINAL]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="149" splitType="Stretch">
+			<staticText>
+				<reportElement x="5" y="18" width="45" height="35" uuid="ae57e149-8076-446e-a7b0-d912b4f8b597"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="12" isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Codigo Medico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="61" y="20" width="72" height="30" uuid="51179d58-a1be-4c12-9fdb-1972bc7b525e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Licencia Medica]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="153" y="28" width="64" height="20" uuid="81fbd7d7-e68f-464e-9e93-b4c2654138f0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombres]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="29" width="56" height="20" uuid="84928431-ad40-466d-ad24-950ac534cec2"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Apellidos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="14" width="51" height="31" uuid="ddeae0f9-106c-473b-ad2c-9a3ddf63f924"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hora de Entrada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="366" y="7" width="41" height="43" uuid="c98d9f4c-485f-48a6-96e2-1fb49b8baa65"/>
+				<textElement>
+					<font fontName="Cambria" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hora de Salida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="427" y="22" width="47" height="31" uuid="b886f254-0515-457c-ac1b-cf5fd9b88686"/>
+				<textElement>
+					<font fontName="Cambria" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Turno Maximo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="487" y="25" width="31" height="20" uuid="1540d228-a59f-448f-9802-d782c1796248"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sexo]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="106" width="555" height="2" forecolor="#33FFCC" backcolor="#00FFCC" uuid="e9e4669d-88a3-4ef6-a9dc-31e2f0fa43a9"/>
+			</line>
+			<staticText>
+				<reportElement x="5" y="83" width="45" height="19" uuid="beeeea39-6a21-4558-87ed-89a498a794a0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="12" isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Lunes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="61" y="83" width="45" height="19" uuid="589c4b70-2e9c-464e-84c7-909e028258f1"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="12" isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Martes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="83" width="63" height="19" uuid="69f82032-d1f9-4fb6-8285-e7ddbee2021a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="12" isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Miercoles]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="189" y="83" width="45" height="19" uuid="2498a86e-3a5c-483a-9576-982bb29cc7d5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="12" isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Jueves]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="243" y="83" width="60" height="19" uuid="57b5cf08-06b7-4dba-95b7-f0d5d0a46fe7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="12" isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Viernes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="62" width="45" height="19" uuid="d1b19330-fac0-4601-a32e-9073e15578e9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="12" isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Asistio]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="56" width="555" height="2" forecolor="#33FFCC" backcolor="#00FFCC" uuid="7b184ace-5aa9-4f52-9a60-cb8841b4293c"/>
+			</line>
+			<line>
+				<reportElement x="0" y="137" width="555" height="2" forecolor="#33FFCC" backcolor="#00FFCC" uuid="bf255f96-acdc-4bb3-a81c-7fd37b7c5126"/>
+			</line>
+			<staticText>
+				<reportElement x="10" y="114" width="143" height="19" uuid="0b8de35a-f0ae-49f4-8e3a-15754a3bfa70"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="12" isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Codigo del Paciente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="354" y="74" width="92" height="19" uuid="203750e3-5264-4821-a32c-6c95dc712b8f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="12" isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Telefono]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="130" splitType="Stretch">
+			<line>
+				<reportElement x="-2" y="46" width="555" height="1" forecolor="#33FFCC" backcolor="#00FFCC" uuid="632fb02a-908e-4414-af07-10f692b2fa1e"/>
+			</line>
+			<textField>
+				<reportElement x="5" y="12" width="45" height="32" uuid="a4b71d7f-566d-4d61-a097-2b2b4267b25f"/>
+				<textFieldExpression><![CDATA[$F{codigoMedico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="61" y="12" width="72" height="32" uuid="840f3b6b-207b-46be-9d28-f71ee51618e7"/>
+				<textFieldExpression><![CDATA[$F{licenciaMedica}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="12" width="64" height="20" uuid="e8784546-6d44-4003-9d56-c9c98f563eed"/>
+				<textFieldExpression><![CDATA[$F{nombres}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="217" y="12" width="66" height="20" uuid="ac39545b-3028-4a34-8726-89918b162150"/>
+				<textFieldExpression><![CDATA[$F{apellidos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="12" width="64" height="20" uuid="450ba0bb-8787-4b62-8c69-6df071e3d9cb"/>
+				<textFieldExpression><![CDATA[$F{horaEntrada}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="354" y="12" width="80" height="20" uuid="267e75e4-e447-404c-a347-40462895e153"/>
+				<textFieldExpression><![CDATA[$F{horaSalida}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="434" y="12" width="40" height="32" uuid="13a1406f-e298-4ba6-ad2a-042ae21e55b2"/>
+				<textFieldExpression><![CDATA[$F{turnoMaximo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="474" y="12" width="74" height="20" uuid="d066daf1-b7d7-49df-9c5e-34b6c1a9dfde"/>
+				<textFieldExpression><![CDATA[$F{sexo}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="88" width="555" height="1" forecolor="#33FFCC" backcolor="#00FFCC" uuid="04e32bdf-fc28-4ed3-8387-e1498794e478"/>
+			</line>
+			<textField>
+				<reportElement x="4" y="63" width="61" height="20" uuid="dfffb16a-86b7-4e37-a4f1-1f764e4291f6"/>
+				<textFieldExpression><![CDATA[$F{lunes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="68" y="63" width="63" height="20" uuid="5abfb166-dfe1-4b33-a59d-1395be983776"/>
+				<textFieldExpression><![CDATA[$F{martes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="134" y="63" width="58" height="20" uuid="882c1c18-5618-4882-a2b9-c87132f5ebba"/>
+				<textFieldExpression><![CDATA[$F{miercoles}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="194" y="63" width="51" height="20" uuid="69ba59fe-b5de-46c2-9523-38d950b1f844"/>
+				<textFieldExpression><![CDATA[$F{jueves}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="245" y="63" width="60" height="20" uuid="a3732b37-fb5c-439b-a2a7-2f42c4e489be"/>
+				<textFieldExpression><![CDATA[$F{viernes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="366" y="63" width="100" height="20" uuid="a81c0c95-dee0-45cc-a03a-af22f58ce26d"/>
+				<textFieldExpression><![CDATA[$F{numeroContacto}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="120" width="555" height="1" forecolor="#33FFCC" backcolor="#00FFCC" uuid="3c627c57-330f-4028-8069-2465247fc4df"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="98" width="100" height="20" uuid="1e027ab5-9169-4c6b-b5d1-c3a4a8650205"/>
+				<textFieldExpression><![CDATA[$F{codigoPaciente}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="87" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="142" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="5" y="111" width="548" height="20" forecolor="#66FFCC" backcolor="#00CCCC" uuid="30069786-87a6-4120-9920-d2205cb14e47"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="13" y="115" width="270" height="18" forecolor="#CCFFFF" uuid="2295a325-30f5-4a93-bc59-277a1fb089ec"/>
+				<textElement>
+					<font fontName="Cambria" size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[La Salud de Guatemala a nuestro Cuidado.]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="419" y="116" width="129" height="20" forecolor="#CCFFFF" uuid="3d1c222f-6a22-4200-a4c6-b9242868a001"/>
+				<textElement>
+					<font fontName="Cambria" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="230" y="0" width="110" height="122" uuid="7ded7dda-d097-42a3-a006-c471751f3c6c"/>
+				<imageExpression><![CDATA["C:\\Users\\programacion\\Documents\\NetBeansProjects\\HospitalInfectologia2015136\\src\\org\\giancarlochicas\\images\\IconoHospital.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="8" y="12" width="100" height="20" uuid="87f4093a-73ef-4ae7-ad9a-88677d851fcd"/>
+				<textFieldExpression><![CDATA[$F{nombreResponsable}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="11" y="42" width="100" height="20" uuid="d70ab74e-47ac-4df4-868c-9b817664eb33"/>
+				<textFieldExpression><![CDATA[$F{nombreCargo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="11" y="62" width="100" height="20" uuid="c921245a-d271-41f6-bdc5-2333a0e210b1"/>
+				<textFieldExpression><![CDATA[$F{nombreArea}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

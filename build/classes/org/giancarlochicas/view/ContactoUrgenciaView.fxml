@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="603.0" prefWidth="691.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.giancarlochicas.controller.ContactoUrgenciaController">
+   <children>
+      <Label layoutX="199.0" layoutY="26.0" prefHeight="49.0" prefWidth="319.0" text="Contacto Urgencia" textFill="#4be49d">
+         <font>
+            <Font name="Cambria" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="92.0" text="Numero Contacto" textFill="#31dbf5">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="76.0" layoutY="127.0" text="Apellidos" textFill="#31dbf5">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="163.0" text="Nombres" textFill="#31dbf5">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="205.0" text="Codigo Paciente" textFill="#31dbf5">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNumeroContacto" editable="false" layoutX="198.0" layoutY="91.0" prefHeight="25.0" prefWidth="295.0" />
+      <TextField fx:id="txtApellidos" editable="false" layoutX="157.0" layoutY="126.0" prefHeight="25.0" prefWidth="379.0" />
+      <TextField fx:id="txtNombres" editable="false" layoutX="157.0" layoutY="161.0" prefHeight="25.0" prefWidth="379.0" />
+      <TableView fx:id="tblContactosUrgencia" layoutX="52.0" layoutY="267.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="233.0" prefWidth="612.0">
+         <columns>
+            <TableColumn fx:id="colCodigoContacto" prefWidth="106.0" text="Codigo Contacto" />
+            <TableColumn fx:id="colNombres" minWidth="0.0" prefWidth="154.0" text="Nombres" />
+            <TableColumn fx:id="colApellidos" minWidth="0.0" prefWidth="117.0" text="Apellidos" />
+            <TableColumn fx:id="colNumeroContacto" minWidth="6.0" prefWidth="119.0" text="Numero Contacto" />
+            <TableColumn fx:id="colCodigoPaciente" minWidth="0.0" prefWidth="115.0" text="Codigo Paciente" />
+         </columns>
+      </TableView>
+      <ImageView fitHeight="125.0" fitWidth="104.0" layoutX="571.0" layoutY="13.0" onMouseClicked="#ventanaPacientes" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-hospital-64.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnNuevo" layoutX="131.0" layoutY="523.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="41.0" prefWidth="104.0" text="Nuevo">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="248.0" layoutY="523.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="41.0" prefWidth="104.0" text="Eliminar">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="485.0" layoutY="523.0" mnemonicParsing="false" onAction="#reporte" prefHeight="41.0" prefWidth="104.0" text="Reporte">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="367.0" layoutY="523.0" mnemonicParsing="false" onAction="#editar" prefHeight="41.0" prefWidth="104.0" text="Editar">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="cmbCodigoPaciente" disable="true" layoutX="181.0" layoutY="204.0" prefHeight="25.0" prefWidth="217.0" />
+   </children>
+</AnchorPane>

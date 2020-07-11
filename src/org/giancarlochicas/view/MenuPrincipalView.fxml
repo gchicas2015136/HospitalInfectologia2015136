@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="499.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.giancarlochicas.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="507.0" fitWidth="499.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/descarga.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar layoutX="287.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Modulos">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaPacientes" text="Pacientes" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaMedicos" text="Medicos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaEspecialidades" text="Especialidades" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaCargos" text="Cargos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaAreas" text="Areas" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaResponsableTurno" text="Responsable de Turno" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaHorarios" text="Horarios" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTurnos" text="Turnos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaMedicoEspecialidad" text="Medico Especialidad" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Reportes">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Reporte Citas" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Acerca de">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaProgramador" text="Programador" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fitHeight="69.0" fitWidth="68.0" layoutX="287.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-hospital-64.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="68.0" fitWidth="93.0" layoutX="355.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-doctor-de-sexo-masculino-64.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="86.0" fitWidth="68.0" layoutX="422.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-hospital-3-64%20(1).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

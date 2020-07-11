@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.giancarlochicas.controller.EspecialidadesController">
+   <children>
+      <Label layoutX="147.0" layoutY="24.0" prefHeight="76.0" prefWidth="309.0" text="Especialidades" textAlignment="CENTER" textFill="#69d369">
+         <font>
+            <Font name="Cambria" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="121.0" prefHeight="33.0" prefWidth="179.0" text="Nombre Especialidad" textFill="#3fa86c">
+         <effect>
+            <Glow />
+         </effect>
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombreEspecialidad" editable="false" layoutX="227.0" layoutY="125.0" prefHeight="25.0" prefWidth="330.0" />
+      <TableView fx:id="tblEspecialidades" layoutX="137.0" layoutY="170.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="330.0">
+        <columns>
+          <TableColumn fx:id="colCodigoEspecialidad" prefWidth="124.0" text="Codigo Especialidad" />
+          <TableColumn fx:id="colNombreEspecialidad" prefWidth="205.0" text="Nombre Especialidad" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="29.0" layoutY="407.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="47.0" prefWidth="118.0" text="Nuevo">
+         <effect>
+            <InnerShadow color="#113216" />
+         </effect>
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="439.0" layoutY="407.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="118.0" text="Reporte">
+         <effect>
+            <InnerShadow color="#113216" />
+         </effect>
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="302.0" layoutY="407.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="118.0" text="Editar">
+         <effect>
+            <InnerShadow color="#113216" />
+         </effect>
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="168.0" layoutY="407.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="47.0" prefWidth="118.0" text="Eliminar">
+         <effect>
+            <InnerShadow color="#113216" />
+         </effect>
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="87.0" fitWidth="70.0" layoutX="514.0" layoutY="19.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Icono1.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

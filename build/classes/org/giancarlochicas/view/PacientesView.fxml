@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="713.0" prefWidth="967.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.giancarlochicas.controller.PacientesController">
+   <children>
+      <Label layoutX="431.0" layoutY="23.0" prefHeight="48.0" prefWidth="170.0" text="Pacientes" textFill="#4be49d">
+         <font>
+            <Font name="Cambria" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="76.0" layoutY="92.0" text="DPI" textFill="#31dbf5">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="76.0" layoutY="127.0" text="Apellidos" textFill="#31dbf5">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="163.0" text="Nombres" textFill="#31dbf5">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="68.0" layoutY="202.0" text="Fecha de Nacimiento" textFill="#31dbf5">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="76.0" layoutY="234.0" text="Direccion" textFill="#31dbf5">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="413.0" layoutY="203.0" text="Sexo" textFill="#31dbf5">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDPI" editable="false" layoutX="120.0" layoutY="91.0" prefHeight="25.0" prefWidth="364.0" />
+      <TextField fx:id="txtApellidos" editable="false" layoutX="157.0" layoutY="126.0" prefHeight="25.0" prefWidth="440.0" />
+      <TextField fx:id="txtNombres" editable="false" layoutX="157.0" layoutY="161.0" prefHeight="25.0" prefWidth="440.0" />
+      <TextField fx:id="txtDireccion" editable="false" layoutX="164.0" layoutY="233.0" prefHeight="25.0" prefWidth="741.0" />
+      <TextField fx:id="txtSexo" editable="false" layoutX="462.0" layoutY="202.0" prefHeight="25.0" prefWidth="328.0" />
+      <TableView fx:id="tblPacientes" layoutX="26.0" layoutY="340.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="233.0" prefWidth="915.0">
+        <columns>
+            <TableColumn fx:id="colCodigoPaciente" minWidth="6.0" prefWidth="61.0" text="Codigo" />
+          <TableColumn fx:id="colDPI" prefWidth="99.0" text="DPI" />
+          <TableColumn fx:id="colApellidos" minWidth="6.0" prefWidth="120.0" text="Apellidos" />
+            <TableColumn fx:id="colNombres" minWidth="0.0" prefWidth="111.0" text="Nombres" />
+            <TableColumn fx:id="colFechaNacimiento" minWidth="0.0" prefWidth="127.0" text="Fecha de Nacimiento" />
+            <TableColumn fx:id="colEdad" minWidth="0.0" prefWidth="62.0" text="Edad" />
+            <TableColumn fx:id="colDireccion" minWidth="0.0" prefWidth="103.0" text="Direccion" />
+            <TableColumn fx:id="colOcupacion" minWidth="0.0" prefWidth="127.0" text="Ocupacion" />
+            <TableColumn fx:id="colSexo" minWidth="0.0" prefWidth="104.0" text="Sexo" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="125.0" fitWidth="104.0" layoutX="801.0" layoutY="23.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-hospital-3-64%20(1).png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnNuevo" layoutX="130.0" layoutY="592.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="41.0" prefWidth="104.0" text="Nuevo">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="257.0" layoutY="592.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="41.0" prefWidth="104.0" text="Eliminar">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="493.0" layoutY="592.0" mnemonicParsing="false" onAction="#generarReporte" prefHeight="41.0" prefWidth="104.0" text="Reporte">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="379.0" layoutY="592.0" mnemonicParsing="false" onAction="#editar" prefHeight="41.0" prefWidth="104.0" text="Editar">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Contacto">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaContactoUrgencia" text="Telefono Urgencia" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="70.0" layoutY="272.0" text="Edad" textFill="#31dbf5">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEdad" editable="false" layoutX="120.0" layoutY="271.0" prefHeight="25.0" prefWidth="170.0" />
+      <TextField fx:id="txtOcupacion" editable="false" layoutX="391.0" layoutY="271.0" prefHeight="25.0" prefWidth="348.0" />
+      <Label layoutX="301.0" layoutY="272.0" text="Ocupacion" textFill="#31dbf5">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </Label>
+      <GridPane fx:id="grpFecha" layoutX="234.0" layoutY="198.0" prefHeight="30.0" prefWidth="161.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="367.0" prefWidth="582.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.giancarlochicas.controller.ProgramadorController">
+   <children>
+      <Label layoutX="222.0" layoutY="33.0" prefHeight="44.0" prefWidth="158.0" text="Programador" textFill="#2bd369">
+         <font>
+            <Font name="Cambria" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="95.0" text="Nombre: Giancarlo Emilio Antonio Chicas Alvarez " textFill="#5cabab">
+         <font>
+            <Font name="Times New Roman" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="131.0" text="Carnet: 2015136" textFill="#5cabab">
+         <font>
+            <Font name="Times New Roman" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="165.0" text="Clave: 8" textFill="#5cabab">
+         <font>
+            <Font name="Times New Roman" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="247.0" text="Centro Educativo Tecnico Laboral Kinal" textFill="#5cabab">
+         <font>
+            <Font name="Times New Roman" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="206.0" text="Grado y seccion: IN5AM" textFill="#5cabab">
+         <font>
+            <Font name="Times New Roman" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="179.0" fitWidth="116.0" layoutX="408.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/FotoProgramador.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="96.0" fitWidth="80.0" layoutX="474.0" layoutY="14.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Icono1.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
